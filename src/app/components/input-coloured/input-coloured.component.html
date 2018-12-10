@@ -6,5 +6,7 @@
   />
   {{ inputValue }}
 
-  <app-warning> This field is required. </app-warning>
+  <app-warning *ngIf="inputValue.length === 0">
+    This field is required.
+  </app-warning>
 </div>
