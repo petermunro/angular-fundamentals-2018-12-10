@@ -1,0 +1,10 @@
+<div>
+  <input
+    type="text"
+    (input)="onInput($event)"
+    [ngClass]="inputValue.length > 0 ? 'valid' : 'invalid'"
+  />
+  {{ inputValue }}
+
+  <app-warning> This field is required. </app-warning>
+</div>

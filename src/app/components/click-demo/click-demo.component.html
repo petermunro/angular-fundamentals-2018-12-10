@@ -1,0 +1,9 @@
+<form (submit)="onSubmit($event)">
+  <input type="text" (input)="onInput($event)" />
+
+  <button type="submit">Click Me</button>
+</form>
+
+<p>Input value is: {{ inputVal }}</p>
+
+<p>Button has {{ clickStatus ? "" : "not" }} been clicked</p>
