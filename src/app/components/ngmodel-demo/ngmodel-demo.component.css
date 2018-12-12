@@ -1,0 +1,20 @@
+.valid {
+  border: 1px solid green;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:disabled {
+  color: gray;
+}
+
+div {
+  border: 1px solid gray;
+  padding: 0.4em;
+}

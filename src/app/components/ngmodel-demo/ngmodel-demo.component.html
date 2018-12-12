@@ -1,0 +1,12 @@
+<input
+  type="text"
+  [(ngModel)]="username"
+  [ngClass]="username ? 'valid' : 'invalid'"
+  >
+<input type="checkbox" [(ngModel)]="termsAccepted"> Terms Accepted
+<select [(ngModel)]="selectedFruit">
+    <option *ngFor="let f of fruit" [value]="f">{{f}}</option>
+  </select>
+
+  <button [disabled]="saved" (click)="onSave()">{{saved ? 'Saved' : 'Save'}}</button>
+

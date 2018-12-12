@@ -1,0 +1,10 @@
+<h2>Contact List</h2>
+
+<ul>
+  <li *ngFor="let contact of contacts">
+    <div>
+        <p>First Name: {{ contact.first_name }} {{ contact.last_name }}</p>
+        <img [src]="contact.avatar" [alt]="contact.first_name + ' ' + contact.last_name">
+    </div>
+  </li>
+</ul>

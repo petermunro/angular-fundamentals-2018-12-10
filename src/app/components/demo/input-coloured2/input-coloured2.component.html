@@ -1,0 +1,41 @@
+Name: <input
+  type="text"
+  [(ngModel)]="inputValue"
+  [ngClass]="inputValue.length > 0 ? 'valid' : 'invalid'"
+  />
+{{ inputValue }}
+<input
+  type="checkbox"
+  [(ngModel)]="checkbox"
+  /> Checkbox
+<select
+  type="checkbox"
+  [(ngModel)]="fruit"
+  >
+  <option value="apple">Apple</option>
+  <option value="banana">Banana</option>
+  <option value="durian">Durian</option>
+</select>
+
+<select
+  type="checkbox"
+  [(ngModel)]="selectedFruit"
+  >
+  <option *ngFor="let f of fruit" [value]="f">{{f}}</option>
+</select>
+
+<button (click)="process()">Save</button>
+
+<h2>
+  Selected items:
+</h2>
+
+<p>
+  Name: {{ inputValue}}
+</p>
+<p>
+  Checked: {{checkbox}}
+</p>
+<p>
+  Fruit: {{selectedFruit}}
+</p>

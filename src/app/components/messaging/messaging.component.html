@@ -1,0 +1,5 @@
+<div>
+  <textarea rows="3" cols="60" [(ngModel)]="message" [maxlength]="maxChars"></textarea>
+  <button (click)="sendClick()" [disabled]="message.length === 0">Send</button>
+  <p>{{maxChars - message.length}} characters remaining</p>
+</div>

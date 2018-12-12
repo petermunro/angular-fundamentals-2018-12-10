@@ -1,6 +1,22 @@
-p {
-  border: 1px solid red;
-  background-color: pink;
+div {
+  border-width: 1px;
+  border-style: solid;
   font-size: 0.8em;
-  padding: 0.2em;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+.warning {
+  border-color: red;
+  background-color: pink;
+}
+
+.info {
+  border-color: green;
+  background-color: lightgreen;
+}
+
+.error {
+  border-color: rgb(48, 1, 58);
+  background-color: rgb(210, 160, 221);
 }
