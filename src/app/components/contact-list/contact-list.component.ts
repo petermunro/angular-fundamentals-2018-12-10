@@ -1,12 +1,5 @@
+import { ContactApiService } from './../../services/contact-api.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-interface Contact {
-  id: number;
-  first_name: string;
-  last_name: string;
-  avatar: string;
-}
 
 @Component({
   selector: 'app-contact-list',
@@ -16,9 +9,9 @@ interface Contact {
 export class ContactListComponent implements OnInit {
   contacts = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private contactApi: ContactApiService) {}
 
   ngOnInit() {
-    this.http.get<Contact[]>('/assets/contact-list.json').subscribe(data => (this.contacts = data));
+    this.contactApi.getContacts().subscribe(data => (this.contacts = data));
   }
 }

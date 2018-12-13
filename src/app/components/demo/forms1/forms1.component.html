@@ -1,0 +1,42 @@
+<form #form="ngForm" (ngSubmit)="registerUser(form)">
+
+  <mat-form-field>
+    <input matInput matInput type="text" placeholder="First Name" name="firstName" [(ngModel)]="user.firstName" required  #firstName="ngModel">
+    <mat-error *ngIf="firstName.touched && firstName.invalid">First name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Last Name" name="user.lastName" [(ngModel)]="user.lastName" required #lastNameC="ngModel">
+    <mat-error *ngIf="lastNameC.touched && lastNameC.invalid">Last name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Country" name="user.country" ngModel>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="email" placeholder="Email" name="user.email" ngModel required #emailC="ngModel">
+    <mat-error *ngIf="emailC.touched && emailC.invalid">Email is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Password" name="user.password" ngModel pattern=".{12,}">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Confirm Password" name="user.passwordConfirm" ngModel>
+  </mat-form-field>
+
+  <mat-checkbox type="checkbox" placeholder="Terms & Conditions" name="user.terms" ngModel required #termsC="ngModel">Terms</mat-checkbox>
+  <mat-error class="checkbox-error" *ngIf="termsC.touched && termsC.invalid">You must agree to the Terms & Conditions</mat-error>
+
+  <mat-form-field>
+    <input matInput type="number" placeholder="Day of Birth" name="user.day" ngModel min="1" max="31" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="number" placeholder="Month of Birth" name="user.month" ngModel min="1" max="12" >
+  </mat-form-field>
+
+  <button type="submit">Sign Up</button>
+</form>

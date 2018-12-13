@@ -1,0 +1,13 @@
+<div class="three-col-layout">
+    <ng-content select="header"></ng-content>
+    <main>
+      <div class="col-1">
+        <ng-content select="main"></ng-content>
+      </div>
+      <div class="col-2">Navigation Pane</div>
+      <div class="col-3">
+        <ng-content select=".sidebar"></ng-content>
+      </div>
+    </main>
+    <footer>footer</footer>
+  </div>
