@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap, map, shareReplay, retryWhen } from 'rxjs/operators';
+import { tap, map, shareReplay, retryWhen, retry } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,9 +13,10 @@ export class ContactlistService {
     return this.http.get('/assets/contact-list.json').pipe(
       tap(() => console.log('Sent HTTP request...')),
       shareReplay(),
-      retryWhen(errors => {
-        return errors.pipe(tap(() => console.log('Retrying...')));
-      })
+      retry(3)
+      // retryWhen(errors => {
+      //   return errors.pipe(tap(() => console.log('Retrying...')));
+      // })
     );
   }
 }

@@ -1,0 +1,36 @@
+li {
+  list-style-type: none;
+  display: inline-block;
+  border: 1px solid lightgray;
+  padding: 0.2em;
+  font-size: 0.8em;
+  background-color: aquamarine;
+  margin: 0 0.1em;
+  border-bottom-color: aquamarine;
+  color: gray;
+  cursor: pointer;
+  border-radius: 3px 3px 0 0;
+}
+
+nav li:hover {
+  border-color: gray;
+  border-bottom-color: aquamarine;
+}
+
+li:focus {
+  outline: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+ul {
+  border-bottom: 1px solid gray;
+}
+
+li.active-link {
+  color: darkslategray;
+  border-color: darkslategray;
+  border-bottom-color: aquamarine;
+}

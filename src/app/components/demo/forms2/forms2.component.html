@@ -1,0 +1,16 @@
+<form [formGroup]="registrationForm" (ngSubmit)="register()">
+
+    <p>
+        Name: <input type="text" name="name" formControlName="name">
+    </p>
+    <p *ngIf="registrationForm.controls.name.touched && registrationForm.controls.name.invalid">
+      Name is required
+    </p>
+
+    <p>
+        Username: <input type="text" name="username" formControlName="username">
+    </p>
+
+    <button type="submit">Register</button>
+
+</form>

@@ -1,35 +1,7 @@
   <header>My Shiny App</header>
-  <div class="sidebar">
-    <ul>
-      <li>Nav 1</li>
-      <li>Nav 2</li>
-      <li>Nav 3</li>
-    </ul>
+
+  <app-tabs></app-tabs>
+
+  <div class="router-outlet">
+    <router-outlet></router-outlet>
   </div>
-  <main>
-    <app-rxjs1></app-rxjs1>
-    <app-rxjs1></app-rxjs1>
-
-    <app-forms1></app-forms1>
-  </main>
-
-  <footer>© Pete 2018</footer>
-
-
-<app-rxjs2-async></app-rxjs2-async>
-
-<app-rxjs3-http></app-rxjs3-http>
-
-<app-contact-list></app-contact-list>
-
-
-<app-ngmodel-demo></app-ngmodel-demo>
-
-<app-warning type="error">This is a message</app-warning>
-
-<app-counter (counterChange)="onCounterChange($event)"></app-counter>
-<app-counter (counterChange)="onCounterChange($event)"></app-counter>
-<app-counter (counterChange)="onCounterChange($event)"></app-counter>
-<app-counter (counterChange)="onCounterChange($event)"></app-counter>
-
-<app-messaging (send)="onSend($event)" maxChars="10"></app-messaging>

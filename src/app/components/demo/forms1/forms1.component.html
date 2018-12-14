@@ -2,7 +2,7 @@
 
   <mat-form-field>
     <input matInput matInput type="text" placeholder="First Name" name="firstName" [(ngModel)]="user.firstName" required  #firstName="ngModel">
-    <mat-error *ngIf="firstName.touched && firstName.invalid">First name is required</mat-error>
+    <!-- <mat-error *ngIf="form.controls.firstName.touched && firstName.invalid">First name is required</mat-error> -->
   </mat-form-field>
 
   <mat-form-field>
@@ -40,3 +40,9 @@
 
   <button type="submit">Sign Up</button>
 </form>
+
+<ul>
+  <li>Touched: {{ form.touched }}</li>
+  <li>Pristine: {{ form.pristine }}</li>
+  <li>Valid: {{ form.valid }}</li>
+</ul>
